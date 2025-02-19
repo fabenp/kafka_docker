@@ -1,4 +1,4 @@
-************Data pipeline with kafka and Docker*****************
+************Data pipeline with kafka and Docker**
 
 
 This is a simple project with a pipeline in Docker using kafka to produce data , influxDB to store it and grafana to visualize it 
@@ -6,6 +6,7 @@ This is a simple project with a pipeline in Docker using kafka to produce data ,
 
 
 Producer (generate data)---> broker--->consumer--> InfluxDB ----> Grafana
+
 All this pipeline is inside docker with the following containers:
 - zookeeper
 - kafka
@@ -20,27 +21,30 @@ All this pipeline is inside docker with the following containers:
 
 folder structure :
 
-│── docker-compose.yml
-│── producer-app
-│   ├── producer.py
-│   ├── requirements.txt
-│   ├── Dockerfile
-│
-│── consumer-app
-│   ├── consumer.py
-│   ├── requirements.txt
-│   ├── Dockerfile
+- docker-compose.yml
+- producer-app
+  - consumer.py
+  - Dockerfile
+  - requirements.txt
+- consumer-app
+  - consumer.py
+  - Dockerfile
+  - requirements.txt
+- grafana_provisioning
+   - datasources.yml
+- kafka
+    - server.properties
 
 how to start:
 
-start docker Desktop
-from your project folder run : docker-compose up -d
+start docker Desktop (install it if you don't have it)
+from your project folder run in cmd: docker-compose up -d
 
 
 InfluxDB:
 
 how to visualize:
-Use docker exec -it influxdb influx to open InfluxDB.
+to open InfluxDB, run in cmd :docker exec -it influxdb influx 
 Run SHOW DATABASES; to list databases.
 use "database"
 Use SHOW MEASUREMENTS; to list tables.
