@@ -1,4 +1,4 @@
-************Data pipeline with kafka and Docker**
+# Data pipeline with kafka and Docker
 
 
 This is a simple project with a pipeline in Docker using kafka to produce data , influxDB to store it and grafana to visualize it 
