@@ -16,9 +16,6 @@ All this pipeline is inside docker with the following containers:
 - grafana
 
 
-
-
-
 folder structure :
 
 - docker-compose.yml
